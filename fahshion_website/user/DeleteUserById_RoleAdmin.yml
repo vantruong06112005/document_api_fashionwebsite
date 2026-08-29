@@ -1,0 +1,15 @@
+info:
+  name: DeleteUserById_RoleAdmin
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: http://localhost:8080/users/10
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
