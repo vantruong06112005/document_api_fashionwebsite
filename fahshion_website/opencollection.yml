@@ -2,6 +2,22 @@ opencollection: 1.0.0
 
 info:
   name: fahshion_website
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkZXYiLCJzdWIiOiJjdW9uZzAxIiwiZXhwIjoxNzkwMzUyNjY3LCJpYXQiOjE3OTAzNDkwNjcsInNjb3BlIjoiQ1VTVE9NRVIifQ.gJPYmtAJ7cQ_otniUCYJAB6CTyRnwhC1FvDTbTFQiODXJu7cjDP3aijii9rojzIpueumRbR-nCufkSXqc0i9nw
 bundled: false
 extensions:
   bruno:
