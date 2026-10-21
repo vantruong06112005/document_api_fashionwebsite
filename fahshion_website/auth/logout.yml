@@ -1,0 +1,24 @@
+info:
+  name: logout
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8080/auth/logout
+  body:
+    type: json
+    data: |-
+      {
+          "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJmYXNoaW9uLXdlYnNpdGUiLCJzdWIiOiJkdW5nMDEiLCJleHAiOjE3OTMxNzQ0MjUsInR5cGUiOiJSRUZSRVNIIiwiaWF0IjoxNzkyNTY5NjI1LCJqdGkiOiI3MTc1NjNhYi1iMjIwLTQ3ZmMtYjdkMS1iYzg3MTM5NDY4ODgifQ.NNBjj1I5sAeV1q1mpLmBsRq6VBRQUoQt01H8z_bTmJ4eYZgPhPHXfxZdXtEaYkJsHSd4XlfrCbso3GFtKCYg3A",
+          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkdW5nMDEiLCJzY29wZSI6IkNVU1RPTUVSIiwiaXNzIjoiZmFzaGlvbi13ZWJzaXRlIiwiZXhwIjoxNzkyNTcwNTI1LCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzkyNTY5NjI1LCJqdGkiOiJhZTM3MjE3Mi04ZGQ0LTQwOWMtOGZiOS0xNjAzZjdiNDMxOTEifQ.D0Bl3GWNYpJX-20KHs1TBLSLKFPzj9KidLEBGYpq9cOhSHUt2N39gRHMiurdUc5FcVAwyFlsbdwNhvjrfQsjuA"
+        
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

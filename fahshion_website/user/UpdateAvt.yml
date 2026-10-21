@@ -1,0 +1,26 @@
+info:
+  name: UpdateAvt
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:8080/users/avatar
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - E:\avt.jpg
+        contentType: image/jpeg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+  omitHeaders:
+    - User-Agent

@@ -1,0 +1,26 @@
+info:
+  name: Register
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://localhost:8080/auth/register
+  body:
+    type: json
+    data: |-
+      {
+        "username": "truong123",
+        "password": "123456",
+        "fullname": "Nguyen Van Truong",
+        "email": "truong123@gmail.com",
+        "phone": "0901234567",
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
