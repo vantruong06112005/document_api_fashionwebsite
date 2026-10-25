@@ -8,12 +8,11 @@ http:
   url: http://localhost:8080/auth/logout
   body:
     type: json
-    data: |-
+    data: |
       {
-          "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJmYXNoaW9uLXdlYnNpdGUiLCJzdWIiOiJkdW5nMDEiLCJleHAiOjE3OTMxNzQ0MjUsInR5cGUiOiJSRUZSRVNIIiwiaWF0IjoxNzkyNTY5NjI1LCJqdGkiOiI3MTc1NjNhYi1iMjIwLTQ3ZmMtYjdkMS1iYzg3MTM5NDY4ODgifQ.NNBjj1I5sAeV1q1mpLmBsRq6VBRQUoQt01H8z_bTmJ4eYZgPhPHXfxZdXtEaYkJsHSd4XlfrCbso3GFtKCYg3A",
-          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkdW5nMDEiLCJzY29wZSI6IkNVU1RPTUVSIiwiaXNzIjoiZmFzaGlvbi13ZWJzaXRlIiwiZXhwIjoxNzkyNTcwNTI1LCJ0eXBlIjoiQUNDRVNTIiwiaWF0IjoxNzkyNTY5NjI1LCJqdGkiOiJhZTM3MjE3Mi04ZGQ0LTQwOWMtOGZiOS0xNjAzZjdiNDMxOTEifQ.D0Bl3GWNYpJX-20KHs1TBLSLKFPzj9KidLEBGYpq9cOhSHUt2N39gRHMiurdUc5FcVAwyFlsbdwNhvjrfQsjuA"
-        
-      }
+          "refreshToken": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJmYXNoaW9uLXdlYnNpdGUiLCJzdWIiOiJhZG1pbjAxIiwiZXhwIjoxNzkzMzYwMjk3LCJ0eXBlIjoiUkVGUkVTSCIsImlhdCI6MTc5Mjc1NTQ5NywianRpIjoiYjg5YTM1MmYtNDUzNy00ZWI3LTkwNDQtNGFmYWFlYTc0ZTk3In0.PK2y1riRwJb6EpHExVP_mqu4KldIK4tDN0Fky25gKnsILvaDdZvft7pATolFy0YhZ4scdH_ImRAAbRMj25qQtA",
+          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjAxIiwic2NvcGUiOiJBRE1JTiIsImlzcyI6ImZhc2hpb24td2Vic2l0ZSIsImV4cCI6MTc5Mjc1NjM5NywidHlwZSI6IkFDQ0VTUyIsImlhdCI6MTc5Mjc1NTQ5NywianRpIjoiOWYzNDRjOTItN2VmOS00OGI3LWJiZWEtNGZmNzUzZmEyM2FmIn0.hg8u64QzI1l9Srxd0bBUoxfKKYU7FYHyLxfKgJ8Ir5zmZbwQ4LzPQZxZri6_rEKPRGTkK4mGjcCDralgdNv7xA"
+        }
   auth: inherit
 
 settings:
