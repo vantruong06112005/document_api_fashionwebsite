@@ -1,0 +1,22 @@
+info:
+  name: google
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseurl}}/auth/google"
+  body:
+    type: json
+    data: |-
+      {
+        "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTQ0MTA1MTQ3Nzc5NDI1NDgyMTgiLCJlbWFpbCI6Im5ndXllbnZhbnRydW9uZ2R6OTFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI3QjRKX0lZekNpeHhDSzRhVG92VVdRIiwibmFtZSI6Ik5ndXnhu4VuIFbEg24gVHLGsOG7nW5nIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xjODBzUXliTGdYZlpBYzg5REZ1MDVEak1zbzk1QmpZRjF0T25FcDJxUGpJR3Q0WVVSSVE9czk2LWMiLCJnaXZlbl9uYW1lIjoiTmd1eeG7hW4iLCJmYW1pbHlfbmFtZSI6IlbEg24gVHLGsOG7nW5nIiwiaWF0IjoxNzkzMTkzNTc2LCJleHAiOjE3OTMxOTcxNzZ9.RPbFiefQxESqlICeLtofB84Eg0rFNflzzP6STzHcoQOJR8a8WsvlDGHstCgKXGdQ9SiD8zbLnek17OjMjAgUDr4rDb6nus0_pkPttKCsRrIi32GrCEAM5fWfV-xeAEpKrqI8dN5IJ50Y_Kvuim04POwGofL0mzHG9r-lw1RBj2ebN8J2C5e1-G3hg2Ryns-WpWNvNpzLmA3_EirP5zKfMrlt8Kraw4ir043R9yo18wxNm_y6a0llcFTxRVKvwMMAAaKKAXvOyKyDNzxzPRWLiMDkNtbWFDh2q67XEnsiZKe69o9KEYMelnpzaHUgQag0iuaJFQC9nTvdjtoqTjT4dg"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

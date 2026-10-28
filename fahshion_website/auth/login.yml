@@ -5,13 +5,13 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/auth/login
+  url: "{{baseurl}}/auth/login"
   body:
     type: json
     data: |-
       {
         "username":"admin01",
-        "password_hash":"123456"
+        "password_hash":"MatKhauMoi@123"
       }
   auth: inherit
 
