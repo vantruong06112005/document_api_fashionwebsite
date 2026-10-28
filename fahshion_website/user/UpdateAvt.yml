@@ -12,8 +12,8 @@ http:
       - name: file
         type: file
         value:
-          - E:\avt.jpg
-        contentType: image/jpeg
+          - E:\TestAVT.png
+        contentType: image/png
   auth: inherit
 
 settings:
