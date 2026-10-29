@@ -1,0 +1,27 @@
+info:
+  name: confirmResolutionPlan
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/returns/1/confirm-plan"
+  body:
+    type: json
+    data: |-
+      {
+        "agreed": true,
+        "customerNote": "Tôi đồng ý chuyển sang diện đổi ý và chịu phí vận chuyển gửi trả.",
+        "bankName": "Techcombank",
+        "accountNumber": "19035678912345",
+        "accountHolderName": "NGUYEN VAN A"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+

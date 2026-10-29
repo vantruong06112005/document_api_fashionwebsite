@@ -1,0 +1,17 @@
+info:
+  name: cancelReturnRequest
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/returns/1/cancel"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+

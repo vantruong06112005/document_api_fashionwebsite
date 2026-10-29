@@ -1,0 +1,41 @@
+info:
+  name: createReturnRequestWithImages
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseurl}}/returns"
+  body:
+    type: multipart-form
+    data:
+      - name: request
+        type: text
+        value: |-
+          {
+            "orderId": 1,
+            "reason": "DEFECTIVE",
+            "reasonDetail": "Áo rách vai",
+            "items": [
+              {
+                "orderItemId": 1,
+                "quantity": 1
+              }
+            ],
+            "bankName": "Vietcombank",
+            "accountNumber": "0123456789",
+            "accountHolderName": "NGUYEN VAN A"
+          }
+        contentType: application/json
+      - name: images
+        type: file
+        value: []
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+

@@ -1,0 +1,33 @@
+info:
+  name: updateReturnRequest
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{baseurl}}/returns/1"
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "CHANGE_OF_MIND",
+        "reasonDetail": "Mặc thử thấy không hợp màu da, muốn trả lại sản phẩm",
+        "items": [
+          {
+            "orderItemId": 1,
+            "quantity": 1
+          }
+        ],
+        "bankName": "MB Bank",
+        "accountNumber": "9876543210",
+        "accountHolderName": "NGUYEN VAN A"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
