@@ -1,0 +1,28 @@
+info:
+  name: restockReturnItems
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{baseurl}}/admin/returns/1/restock"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "items": [
+          {
+            "returnRequestItemId": 1,
+            "restockQuantity": 1,
+            "note": "Sản phẩm còn mới nguyên tem mác, nhập lại kho bán."
+          }
+        ]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

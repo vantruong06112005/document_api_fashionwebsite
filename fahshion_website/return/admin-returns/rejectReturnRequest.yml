@@ -1,0 +1,22 @@
+info:
+  name: rejectReturnRequest
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/reject"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "rejectionReason": "Sản phẩm đã qua sử dụng và mất tem mác, không đạt điều kiện hoàn trả."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,31 @@
+info:
+  name: inspectReturnRequest
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/inspect"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "items": [
+          {
+            "returnRequestItemId": 1,
+            "acceptedQuantity": 1,
+            "inspectionNote": "Đúng lỗi rách đường may ở vai phải, đạt điều kiện hoàn."
+          }
+        ],
+        "reclassifyToChangeOfMind": false,
+        "returnShippingFee": 0,
+        "rejectionReason": ""
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

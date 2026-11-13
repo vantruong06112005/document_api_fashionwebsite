@@ -1,0 +1,24 @@
+info:
+  name: executeRefund
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseurl}}/admin/returns/1/refund"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "refundTransactionCode": "VCB-UNC-20261115-001",
+        "refundProofImageUrl": "https://res.cloudinary.com/demo/image/upload/v1/refund-proof-001.jpg",
+        "note": "Đã chuyển khoản hoàn tiền qua Vietcombank."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

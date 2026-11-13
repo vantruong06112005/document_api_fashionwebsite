@@ -1,0 +1,23 @@
+info:
+  name: recordOverdueNote
+  type: http
+  seq: 11
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/overdue-note"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "overdueReason": "Kho đang quá tải kiểm kê cuối tuần, cần thêm thời gian đối soát.",
+        "estimatedCompletionAt": "2026-11-20T17:00:00"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

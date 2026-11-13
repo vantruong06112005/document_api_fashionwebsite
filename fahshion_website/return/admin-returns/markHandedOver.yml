@@ -1,0 +1,23 @@
+info:
+  name: markHandedOver
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/handover"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "handedOverAt": "2026-11-14T10:30:00",
+        "note": "Khách đã bàn giao kiện hàng cho bưu tá GHN."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,22 @@
+info:
+  name: approveReturnRequest
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/approve"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "instructionNote": "Vui lòng đóng gói nguyên tem mác và gửi trả về kho trong vòng 7 ngày."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

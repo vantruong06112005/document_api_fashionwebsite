@@ -1,0 +1,16 @@
+info:
+  name: completeReturnRequest
+  type: http
+  seq: 12
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/complete"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

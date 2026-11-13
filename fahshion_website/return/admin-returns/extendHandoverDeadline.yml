@@ -1,0 +1,22 @@
+info:
+  name: extendHandoverDeadline
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/extend-handover"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "extensionReason": "Đơn vị vận chuyển chậm đến lấy hàng do thời tiết xấu."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

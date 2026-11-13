@@ -1,0 +1,23 @@
+info:
+  name: receiveAtWarehouse
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/receive"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "receivedAt": "2026-11-15T14:00:00",
+        "note": "Kho đã tiếp nhận kiện hàng, bao bì bên ngoài còn nguyên niêm phong."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

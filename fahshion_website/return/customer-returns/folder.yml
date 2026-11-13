@@ -1,0 +1,7 @@
+info:
+  name: customer-returns
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
