@@ -1,0 +1,26 @@
+info:
+  name: putPaymentMethod
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: "{{baseurl}}/paymentMethods/3"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "MoMo_updated",
+        "name": "Thanh toan bang momo",
+        "description": "Thanh toan online",
+        "iconUrl": "https://momo",
+        "isActive": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

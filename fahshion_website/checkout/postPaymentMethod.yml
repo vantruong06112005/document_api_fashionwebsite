@@ -1,0 +1,25 @@
+info:
+  name: postPaymentMethod
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{baseurl}}/paymentMethods"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "MoMo",
+        "name": "Thanh toan bang momo",
+        "description": "Thanh toan online",
+        "iconUrl": "https://momo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
