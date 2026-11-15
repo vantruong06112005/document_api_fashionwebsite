@@ -1,0 +1,24 @@
+info:
+  name: createReturnHoliday
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{baseurl}}/admin/returns/holidays"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "holidayDate": "2026-02-17",
+        "name": "Mùng 1 Tết Âm lịch",
+        "description": "Ngày nghỉ Tết Nguyên Đán năm 2026 theo lịch áp dụng."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

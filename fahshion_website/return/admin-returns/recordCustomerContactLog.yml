@@ -1,0 +1,22 @@
+info:
+  name: recordCustomerContactLog
+  type: http
+  seq: 17
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/admin/returns/1/contact-log"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "contactNote": "Đã gọi điện cho khách theo SĐT đăng ký 2 lần không bắt máy, đã dán tem niêm phong kiện hàng và cất tại kệ lưu kho riêng B3."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

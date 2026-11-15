@@ -1,0 +1,24 @@
+info:
+  name: updateBankAccount
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{baseurl}}/returns/1/bank-account"
+  body:
+    type: json
+    data: |-
+      {
+        "bankName": "Techcombank",
+        "accountNumber": "19035678912345",
+        "accountHolderName": "NGUYEN VAN A"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

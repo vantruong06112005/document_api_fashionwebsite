@@ -1,0 +1,24 @@
+info:
+  name: updateReturnHoliday
+  type: http
+  seq: 15
+
+http:
+  method: PUT
+  url: "{{baseurl}}/admin/returns/holidays/1"
+  auth: inherit
+  body:
+    type: json
+    data: |-
+      {
+        "holidayDate": "2026-02-18",
+        "name": "Mùng 2 Tết Âm lịch",
+        "description": "Cập nhật ngày nghỉ Tết Nguyên Đán năm 2026."
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

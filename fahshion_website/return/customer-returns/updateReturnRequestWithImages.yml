@@ -1,0 +1,39 @@
+info:
+  name: updateReturnRequestWithImages
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{baseurl}}/returns/1"
+  body:
+    type: multipart-form
+    data:
+      - name: request
+        type: text
+        value: |-
+          {
+            "reason": "DEFECTIVE",
+            "reasonDetail": "Cập nhật lý do và thay thế toàn bộ ảnh minh chứng mới",
+            "items": [
+              {
+                "orderItemId": 1,
+                "quantity": 1
+              }
+            ],
+            "bankName": "MB Bank",
+            "accountNumber": "9876543210",
+            "accountHolderName": "NGUYEN VAN A"
+          }
+        contentType: application/json
+      - name: images
+        type: file
+        value: []
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
